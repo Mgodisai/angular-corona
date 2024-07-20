@@ -1,0 +1,11 @@
+<div class="covid-data-container">
+  @for(dailyData of covidStat; track dailyData.date) {
+  <p
+    class="covid-daily-data"
+    [appCovidDataFormat]="dailyData"
+    [showTruth]="showTruth"
+  >
+    {{ dailyData | displayCovidData : showTruth }}
+  </p>
+  }
+</div>
